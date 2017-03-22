@@ -1,0 +1,43 @@
+ <div id="course-index">
+    <div class="container">
+		<div class="row">
+
+			<% @courses.each do |course| %>
+
+				<div class="col-sm-4" id="course-<%= course.id%>">
+					<div id="card" class="weater">
+						<div class="city-selected">
+							<article>
+								<div class="info">
+									<div class="city"><%= course.name %></div>
+									<div class="night">Night - 22:07 PM</div>
+
+									<div class="temp">3°</div>
+								</div>
+
+								<div class="icon">
+
+								</div>
+
+							</article>
+            </div>
+
+						<div class="days">
+							<div class="row row-no-gutter">
+								<div class="col-md-4 col-md-offset-4">
+									<div class="day">
+										<!-- <h1>Tuesday</h1> -->
+										<div class="btn btn-success btn-enrollment" data-id="<%=course.id%>">Enroll</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<% end %>
+
+		</div>
+	</div>
+</div>
